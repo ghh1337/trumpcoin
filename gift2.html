@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Official Trump & Trust Wallet Акция</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #121212;
+      color: #E4E4E4;
+      overflow-x: hidden;
+    }
+
+    header {
+      background-image: url('IMG_2119.webp');
+      background-size: cover;
+      background-position: center;
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #FFD700;
+      border-bottom: 2px solid #FFD700;
+    }
+
+    header h1 {
+      font-size: 36px;
+      margin: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 10px 20px;
+      border-radius: 8px;
+    }
+
+    .timer-section {
+      text-align: center;
+      padding: 20px;
+      color: #FFD700;
+      background-color: #1a1a1a;
+      border-radius: 10px;
+      margin-top: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    }
+
+    .timer-section h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      text-shadow: 0 2px 4px rgba(255, 215, 0, 0.6);
+    }
+
+    .timer {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .time-block {
+      text-align: center;
+      background-color: #1A1A1A;
+      padding: 10px 15px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    }
+
+    .time-value {
+      font-size: 32px;
+      font-weight: bold;
+      color: #FFD700;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    }
+
+    .time-label {
+      font-size: 14px;
+      color: #CCCCCC;
+    }
+
+    .button-container {
+      margin-top: 20px;
+    }
+
+    .button-container button {
+      padding: 12px 30px;
+      font-size: 18px;
+      color: #F0F0F0;
+      background-color: #FFD700;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.3s;
+      font-weight: bold;
+    }
+
+    .button-container button:hover {
+      background-color: #e5c200;
+      transform: scale(1.05);
+    }
+
+    .steps, .why-choose-us {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .steps h2, .why-choose-us h2 {
+      font-size: 28px;
+      color: #FFD700;
+      margin-bottom: 20px;
+      text-shadow: 0 2px 4px rgba(255, 215, 0, 0.6);
+    }
+
+    .steps .step {
+      background-color: #1A1A1A;
+      padding: 20px;
+      margin: 10px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+      transition: background-color 0.3s ease;
+    }
+
+    .steps .step:hover {
+      background-color: #333333;
+    }
+
+    .steps .step h3 {
+      color: #FFD700;
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .steps .step p {
+      font-size: 16px;
+      color: #CCCCCC;
+    }
+
+    /* Блок скачивания */
+    .app-links {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 40px;
+      margin-top: 15px;
+    }
+
+    .app-item {
+      text-align: center;
+    }
+
+    .app-item img {
+      width: 110px;
+      height: auto;
+      transition: transform 0.3s ease;
+      filter: drop-shadow(0 0 4px rgba(255, 215, 0, 0.3));
+    }
+
+    /* Коррекция размера Google Play */
+    .app-item:nth-child(2) img {
+      width: 90px;
+      margin-top: 6px;
+    }
+
+    .app-item img:hover {
+      transform: scale(1.08);
+    }
+
+    .app-item p {
+      color: #FFD700;
+      font-weight: bold;
+      margin-top: 8px;
+      font-size: 16px;
+    }
+
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .feature {
+      flex: 1 1 calc(30% - 20px);
+      background-color: #1A1A1A;
+      padding: 20px;
+      border-radius: 16px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+      text-align: center;
+      color: #E4E4E4;
+      transition: transform 0.3s ease;
+    }
+
+    .feature:hover {
+      transform: scale(1.05);
+    }
+
+    .feature img {
+      width: 165px;
+      height: 165px;
+      object-fit: contain;
+      margin-bottom: 10px;
+    }
+
+    .feature h3 {
+      font-size: 20px;
+      color: #FFD700;
+      font-weight: bold;
+    }
+
+    .feature p {
+      font-size: 16px;
+      color: #CCCCCC;
+    }
+
+    footer {
+      background-color: #1A1A1A;
+      color: #72767a;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Присоединяйтесь к революции Official Trump уже сегодня!</h1>
+  </header>
+
+  <div class="timer-section">
+    <h2>Успей до конца акции:</h2>
+    <div class="timer">
+      <div class="time-block"><div class="time-value" id="days">00</div><div class="time-label">Дней</div></div>
+      <div class="time-block"><div class="time-value" id="hours">00</div><div class="time-label">Часов</div></div>
+      <div class="time-block"><div class="time-value" id="minutes">00</div><div class="time-label">Минут</div></div>
+      <div class="time-block"><div class="time-value" id="seconds">00</div><div class="time-label">Секунд</div></div>
+    </div>
+  </div>
+
+  <section class="steps">
+    <h2>Как принять участие?</h2>
+
+    <div class="step">
+      <h3>Шаг 1: Установите Trust Wallet</h3>
+      <p>Скачайте приложение Trust Wallet из официального магазина приложений. Создайте кошелек или войдите в существующий.</p>
+      <div class="app-links">
+        <div class="app-item">
+          <a href="https://apps.apple.com/app/trust-crypto-bitcoin-wallet/id1288339409" target="_blank">
+            <img src="https://trustwallet.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimage.a073b4c3.png&w=256&q=75" alt="App Store">
+          </a>
+          <p>iOS</p>
+        </div>
+        <div class="app-item">
+          <a href="https://play.google.com/store/apps/details?id=com.wallet.crypto.trustapp" target="_blank">
+            <img src="https://trustwallet.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimage.5ee64b2e.png&w=256&q=75" alt="Google Play">
+          </a>
+          <p>Android</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="step">
+      <h3>Шаг 2: Иметь баланс от 100 USDT</h3>
+      <p>Для участия в акции необходимо иметь баланс 100 USDT TRC20. Пополните баланс Trust Wallet с помощью покупки или обмена криптовалюты внутри приложения.</p>
+    </div>
+
+    <div class="step">
+      <h3>Шаг 3: Участвуй в акции</h3>
+      <p>Подтвердите участие, авторизируйте свой кошелёк Trust Wallet в акции и следите за обновлениями, чтобы не упустить возможность выиграть 25 000 $TRUMP!</p>
+    </div>
+
+    <div class="button-container">
+      <button onclick="window.location.href='index.html'">Принять участие и получить гарантированные 100 USDT</button>
+    </div>
+  </section>
+
+  <section class="why-choose-us">
+    <h2>Почему выбирают Trust Wallet?</h2>
+    <div class="features">
+      <div class="feature">
+        <h3>Переводите криптовалюту с бирж без труда</h3>
+        <img src="https://trustwallet.com/_next/static/media/raw.b373ab3f.svg" alt="Безопасность">
+        <p>Управляйте криптовалютами и вносите активы напрямую с таких бирж, как Binance и Coinbase.</p>
+      </div>
+      <div class="feature">
+        <h3>Истинное владение активами</h3>
+        <img src="https://trustwallet.com/_next/static/media/raw.0acff7b3.svg" alt="Удобство">
+        <p>Только вы владеете своими ключами — никто, кроме вас, не имеет доступа к seed-фразам.</p>
+      </div>
+      <div class="feature">
+        <h3>Абсолютная конфиденциальность</h3>
+        <img src="https://trustwallet.com/_next/static/media/raw.16e2b8fb.svg" alt="Доступность">
+        <p>Trust Wallet не собирает и не отслеживает личную информацию пользователей.</p>
+      </div>
+      <div class="feature">
+        <h3>Предупреждения о рискованных транзакциях</h3>
+        <img src="https://trustwallet.com/_next/static/media/raw.f17c90c5.svg" alt="Поддержка">
+        <p>Получайте уведомления об опасных адресах и подключениях к dApp.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Trust Wallet. Все права защищены.</p>
+  </footer>
+
+  <script>
+    function updateTimer() {
+      const end = new Date("November 30, 2025 23:59:59").getTime();
+      const now = new Date().getTime();
+      const dist = end - now;
+      if (dist < 0) return document.querySelector(".timer-section").innerHTML = "<h2>Акция завершена!</h2>";
+      const d = Math.floor(dist / (1000 * 60 * 60 * 24));
+      const h = Math.floor((dist % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const m = Math.floor((dist % (1000 * 60 * 60)) / (1000 * 60));
+      const s = Math.floor((dist % (1000 * 60)) / 1000);
+      document.getElementById("days").textContent = d;
+      document.getElementById("hours").textContent = h;
+      document.getElementById("minutes").textContent = m;
+      document.getElementById("seconds").textContent = s;
+    }
+    setInterval(updateTimer, 1000);
+  </script>
+</body>
+</html>

